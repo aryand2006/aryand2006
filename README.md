@@ -19,7 +19,8 @@ I'm a Computer Science student at **Carnegie Mellon University**, driven by curi
 - **Financial Engineering**: Live ML-driven trading systems, portfolio optimization
 - **Cross-Paradigm Development**: Building the same system in multiple languages to explore design tradeoffs
 - **Browser/UI Design**: Interfaces that reduce friction, distraction, and overload
-When I'm not coding, I’m always up for a good chess match, most sports (swimming, running, hiking, mini golf, rock climbing, badminton, table tennis, skiing), and any opportunity to innovate and collaborate.
+
+*When I'm not coding, I’m always up for a good chess match, most sports (swimming, running, hiking, mini golf, rock climbing, badminton, table tennis, skiing), and any opportunity to innovate and collaborate.*
 ---
 
 ### ⚡ Featured Projects
