@@ -1,6 +1,6 @@
 <h1 align="center">Aryan Daga</h1>
 <p align="center">
-  🚀 CS @ Carnegie Mellon | 🧠 Machine Learning & Computational Finance (Concentrations)<br>
+  CS @ Carnegie Mellon | Machine Learning & Computational Finance (Concentrations)<br>
   Building intelligent systems that think, trade, reason, and fly.
 </p>
 
