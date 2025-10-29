@@ -12,7 +12,7 @@
 
 ---
 
-### 🧠 About Me
+### About Me
 I'm a Computer Science student at **Carnegie Mellon University**, driven by curiosity and a passion for systems that interact with the real world. I specialize in:
 
 - **LLM Systems**: Retrieval-augmented generation (RAG), multi-agent orchestration, verification pipelines
@@ -24,9 +24,9 @@ I'm a Computer Science student at **Carnegie Mellon University**, driven by curi
 
 ---
 
-### ⚡ Featured Projects
+### Featured Projects
 
-#### 🔁 Automated Trading System
+#### Automated Trading System
 > A modular ML trading engine that achieved **282% ROI** in live stock trading.  
 > Real-time portfolio optimization, signal generation, backtesting, and broker integration.  
 **Tech**: Python, NumPy, Pandas, CLI  
@@ -35,7 +35,7 @@ I'm a Computer Science student at **Carnegie Mellon University**, driven by curi
 
 ---
 
-#### 🧠 EY AI Research Agent
+#### EY AI Research Agent
 > An enterprise-grade **multi-agent LLM assistant** for research over internal docs, PDFs, and web data.  
 > Built using Llama 3, hybrid retrieval, and real-time answer verification.  
 **Tech**: Python, LangChain, Mistral API, FAISS, BM25, Llama  
@@ -44,7 +44,7 @@ I'm a Computer Science student at **Carnegie Mellon University**, driven by curi
 
 ---
 
-#### 🗂️ Flowify
+#### Flowify
 > Turns long video transcripts into interactive mind maps using **pure NLP** (no generative AI).  
 > Built on TfIdf, cosine similarity, and sliding submatrix clustering.  
 **Tech**: Python, NLTK, Scikit-learn, JSMind  
@@ -53,7 +53,7 @@ I'm a Computer Science student at **Carnegie Mellon University**, driven by curi
 
 ---
 
-#### 🌐 NOVA Browser
+#### NOVA Browser
 > A futuristic browser prototype built in React + C++, designed for **contextual tab management**.  
 > AI-powered spaces, distraction-free interface, command palette, tab insights.  
 **Tech**: React, C++, Context API, Modern UI/UX  
@@ -62,7 +62,7 @@ I'm a Computer Science student at **Carnegie Mellon University**, driven by curi
 
 ---
 
-#### ♻️ TicTacToe Multiverse
+#### TicTacToe Multiverse
 > One AI engine. Six languages. Infinite comparisons.  
 > A cross-language TicTacToe system with unbeatable AI and side-by-side design tradeoffs.  
 **Tech**: Python, Rust, Swift, Standard ML, Java, MATLAB  
@@ -71,7 +71,7 @@ I'm a Computer Science student at **Carnegie Mellon University**, driven by curi
 
 ---
 
-### 🌌 Currently Exploring
+### Currently Exploring
 - Token-efficient prompting for LLM chains
 - Performance-optimized multi-agent AI pipelines
 - Symbolic AI + neural hybrids
@@ -79,7 +79,7 @@ I'm a Computer Science student at **Carnegie Mellon University**, driven by curi
 
 ---
 
-### 💬 Let's Connect
+### Let's Connect
 If you’re building something weird, hard, or world-changing—reach out.  
 I’m always looking for people who think beyond the default UI.
 
