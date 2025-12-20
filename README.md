@@ -80,6 +80,6 @@ I'm a Computer Science student at **Carnegie Mellon University**, driven by curi
 ---
 
 ### Let's Connect
-If you’re building something weird, hard, or world-changing—reach out.  
+If you’re building something weird, hard, or world-changing, reach out.  
 I’m always looking for people who think beyond the default UI.
 
