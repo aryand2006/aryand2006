@@ -1,7 +1,7 @@
 <h1 align="center">Aryan Daga</h1>
 <p align="center">
-  CS @ Carnegie Mellon | Machine Learning & Computational Finance (Concentrations)<br>
-  Building intelligent systems that think, trade, reason, and fly.
+  CS @ Carnegie Mellon • Machine Learning & Computational Finance<br>
+  Building intelligent systems that think, trade, reason, and adapt.
 </p>
 
 <p align="center">
@@ -13,73 +13,46 @@
 ---
 
 ### About Me
-I'm a Computer Science student at **Carnegie Mellon University**, driven by curiosity and a passion for systems that interact with the real world. I specialize in:
+I'm a Computer Science student at Carnegie Mellon University, focused on building AI systems that interact with real-world data. My work spans:
 
-- **LLM Systems**: Retrieval-augmented generation (RAG), multi-agent orchestration, verification pipelines
-- **Financial Engineering**: Live ML-driven trading systems, portfolio optimization
-- **Cross-Paradigm Development**: Building the same system in multiple languages to explore design tradeoffs
-- **Browser/UI Design**: Interfaces that reduce friction, distraction, and overload
-
-<p>When I'm not coding, I’m always up for a good chess match, most sports (swimming, running, hiking, mini golf, rock climbing, badminton, table tennis, skiing), and any opportunity to innovate and collaborate.</p>
+- LLM engineering: RAG pipelines, agent orchestration, retrieval verification
+- ML in finance: live trading systems and portfolio optimization
+- Systems design: building across languages to analyze tradeoffs
+- Human-computer interaction: clean, responsive interfaces for high-cognitive-load workflows
 
 ---
 
-### Featured Projects
+### Selected Projects
 
 #### Automated Trading System
-> A modular ML trading engine that achieved **282% ROI** in live stock trading.  
-> Real-time portfolio optimization, signal generation, backtesting, and broker integration.  
-**Tech**: Python, NumPy, Pandas, CLI  
+A modular ML engine achieving 282% ROI in live stock trading. Includes signal generation, backtesting, and broker integration.  
+**Tech**: Python, NumPy, Pandas  
+*Private/internal*
 
-<p>🔗 *Private/internal project*</p>
+#### EY AI Research Agent  
+Multi-agent LLM assistant for querying internal docs and structured data. Uses BM25 + FAISS, prompt refinement, and Llama 3.  
+**Tech**: Python, LangChain, FAISS, Mistral API  
+*Private/internal*
 
----
+#### Flowify  
+Transforms video transcripts into interactive mind maps using NLP-only techniques.  
+**Tech**: Python, NLTK, Scikit-learn  
+[Repo](https://github.com/aryand2006/flowify)
 
-#### EY AI Research Agent
-> An enterprise-grade **multi-agent LLM assistant** for research over internal docs, PDFs, and web data.  
-> Built using Llama 3, hybrid retrieval, and real-time answer verification.  
-**Tech**: Python, LangChain, Mistral API, FAISS, BM25, Llama  
-
-🔗 *Private/internal project*
-
----
-
-#### Flowify
-> Turns long video transcripts into interactive mind maps using **pure NLP** (no generative AI).  
-> Built on TfIdf, cosine similarity, and sliding submatrix clustering.  
-**Tech**: Python, NLTK, Scikit-learn, JSMind  
-
-🔗 [View Repo](https://github.com/aryand2006/flowify)
-
----
-
-#### NOVA Browser
-> A futuristic browser prototype built in React + C++, designed for **contextual tab management**.  
-> AI-powered spaces, distraction-free interface, command palette, tab insights.  
-**Tech**: React, C++, Context API, Modern UI/UX  
-
-🔗 [View Repo](https://github.com/aryand2006/nova-browser)
-
----
-
-#### TicTacToe Multiverse
-> One AI engine. Six languages. Infinite comparisons.  
-> A cross-language TicTacToe system with unbeatable AI and side-by-side design tradeoffs.  
-**Tech**: Python, Rust, Swift, Standard ML, Java, MATLAB  
-
-🔗 [View Repo](https://github.com/aryand2006/tictactoe-multiverse)
+#### NOVA Browser  
+Browser prototype for contextual tab management with AI-assisted navigation.  
+**Tech**: React, C++, Context API  
+[Repo](https://github.com/aryand2006/nova-browser)
 
 ---
 
 ### Currently Exploring
-- Token-efficient prompting for LLM chains
-- Performance-optimized multi-agent AI pipelines
-- Symbolic AI + neural hybrids
-- Clean terminal UI design
+- Efficient multi-agent LLM pipelines
+- Context-aware prompt composition
+- Hybrid symbolic-neural systems
+- Scientific UX tooling
 
 ---
 
-### Let's Connect
-If you’re building something weird, hard, or world-changing, reach out.  
-I’m always looking for people who think beyond the default UI.
-
+### Connect
+If you're building something ambitious or unconventional, feel free to reach out.
