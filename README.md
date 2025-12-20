@@ -7,7 +7,6 @@
 <p align="center">
   <a href="https://linkedin.com/in/aryan-daga"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat&logo=linkedin&logoColor=white"/></a>
   <a href="mailto:aryand@andrew.cmu.edu"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white"/></a>
-  <a href="https://github.com/aryand2006"><img src="https://img.shields.io/github/followers/aryand2006?label=Follow&style=social"/></a>
 </p>
 
 ---
