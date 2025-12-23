@@ -2,6 +2,7 @@
 <p align="center">
   CS @ Carnegie Mellon • Machine Learning & Computational Finance<br>
 </p>
+
 ---
 
 ### About Me
