@@ -139,7 +139,7 @@ sediment ratchet --accept
 sediment trajectory --since v1.0.0
 ```
 
-Wire it into CI with [`ci/github-action.yml`](ci/github-action.yml) — it posts a
+Wire it into CI with [`.github/workflows/sediment.yml`](.github/workflows/sediment.yml) — it posts a
 markdown report on the PR and updates it in place. Adopt in report-only mode
 first; `--strict` promotes warnings to failures once a baseline is settled.
 

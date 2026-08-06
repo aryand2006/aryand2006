@@ -1,5 +1,3 @@
-# Drop this in .github/workflows/sediment.yml
-#
 # Runs the erosion gate on every pull request and posts the result as a comment.
 # The gate needs both sides of the change, so the checkout must not be shallow.
 
