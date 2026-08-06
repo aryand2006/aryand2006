@@ -93,6 +93,10 @@ with identifiers and literal values erased, then comparing k-gram shingle sets b
 Jaccard similarity through an inverted index. Agents copy-paste and then rename;
 text-based clone detection misses that entirely, and this does not.
 
+Duplication *between two tests* is ignored — parallel structure across cases is
+what makes a suite readable, and flagging it produces exactly the noise that gets
+a gate switched off. A test duplicating production code is still reported.
+
 ### Why marginal, not absolute
 
 The score that gates a change is the **erosion rate** — net debt added per 100
@@ -156,7 +160,7 @@ estimate. Density is total debt per 1,000 lines.
 
 | Repository | Files | LOC | Units | Structural | Signals | **Density** | Clones |
 |---|---|---|---|---|---|---|---|
-| sediment (this tool) | 9 | 1198 | 86 | 11.1 | 2.4 | **11.3** | 0 |
+| sediment (this tool) | 9 | 1240 | 88 | 11.1 | 3.4 | **11.7** | 0 |
 | ShadowStack (Python packages) | 6 | 1010 | 47 | 3.2 | 9.3 | **12.4** | 1 |
 | SpreadsheetByAryan | 38 | 6887 | 420 | 87.1 | 58.8 | **21.2** | 2 |
 | CastQuest | 2 | 197 | 14 | 1.3 | 4.7 | **30.4** | 0 |
@@ -168,7 +172,9 @@ reads. The single heaviest unit found anywhere was `Offset`'s
 `estimate_carbon_strict` — cyclomatic 96, **cognitive 292**, nesting depth 10,
 219 lines — one function carrying 39.8 debt, a quarter of that repository's total.
 
-`sediment` gates itself in its own CI.
+`sediment` gates itself in its own CI, and that is how the test-duplication rule
+above was found: run against its own history, the gate reported 100%-similar test
+functions. They were true positives and bad signal, so the rule changed.
 
 ---
 
@@ -197,7 +203,7 @@ Stated plainly, because a measurement tool that oversells itself is worthless:
 
 ```bash
 pip install -e ".[dev]"
-pytest            # 43 tests, no network, no fixtures beyond throwaway git repos
+pytest            # 45 tests, no network, no fixtures beyond throwaway git repos
 ```
 
 The end-to-end tests build real git repositories in a temp directory and gate

@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import ast
 import hashlib
+import re
 from collections import defaultdict
 from dataclasses import dataclass
 
@@ -29,6 +30,19 @@ CLONE_THRESHOLD = 0.80
 
 # Units smaller than this produce too few shingles to judge honestly.
 MIN_UNIT_LOC = 6
+
+_TEST_PATH = re.compile(r"(^|/)(tests?|testing)/|(^|/)test_[^/]*\.py$|_test\.py$")
+
+
+def is_test_unit(unit: Unit) -> bool:
+    """True for units living in test code.
+
+    Tests are deliberately repetitive -- parallel structure across cases is what
+    makes a suite readable, and flagging it produces exactly the kind of noise
+    that gets a gate switched off. Duplication *between* two tests is therefore
+    ignored, while a test duplicating production code is still reported.
+    """
+    return bool(_TEST_PATH.search(unit.path))
 
 
 def _node_token(node: ast.AST) -> str:
@@ -141,6 +155,8 @@ def find_clones(
     pairs: list[ClonePair] = []
     for (i, j), overlap in shared.items():
         left, right = candidates[i], candidates[j]
+        if is_test_unit(left) and is_test_unit(right):
+            continue
         union = len(left.shingles) + len(right.shingles) - overlap
         if union <= 0:
             continue

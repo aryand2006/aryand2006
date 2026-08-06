@@ -119,6 +119,21 @@ def test_tiny_functions_are_not_compared():
     assert find_clones(units) == []
 
 
+def test_duplication_between_two_tests_is_ignored():
+    """Parallel structure across test cases is idiomatic, not erosion."""
+    units = build_units(RENAMED_PAIR, path="tests/test_billing.py")
+    assert find_clones(units) == []
+
+
+def test_a_test_duplicating_production_code_is_still_reported():
+    units = build_units(RENAMED_PAIR.split("def handle_invoices")[0], path="billing.py")
+    units += build_units(
+        "def handle_invoices" + RENAMED_PAIR.split("def handle_invoices")[1],
+        path="tests/test_billing.py",
+    )
+    assert len(find_clones(units)) == 1
+
+
 def test_operator_difference_lowers_similarity():
     """Same shape but different arithmetic is a real behavioural difference."""
     same = build_units(RENAMED_PAIR)
