@@ -121,9 +121,9 @@ is not that they are unpolished, it is that there are six of them.
 **Next, in order of value:**
 
 1. **Extract to its own repository.** It currently lives in the profile repo
-   because that was the only writable target. `sediment` deserves its own home,
-   and — given point 2 of the audit — it should be developed there in real
-   commits.
+   because that was the only writable target. The extraction is prepared and
+   verified — see [Migration](#6-migration) below — but creating the repository
+   needs a credential this session did not have.
 2. **A second language adapter.** The unit/metric/signal split is already
    language-agnostic; TypeScript is the obvious second target and the one most
    agent code is written in.
@@ -145,6 +145,24 @@ is not that they are unpolished, it is that there are six of them.
 Recommended, not done here (it needs repo-level access this session did not have):
 **archive or unpin the long tail.** Twelve of the 26 repositories actively dilute
 the signal. Archiving is reversible and costs nothing.
+
+---
+
+## 6. Migration — done
+
+`sediment` now lives at **[github.com/aryand2006/sediment](https://github.com/aryand2006/sediment)**
+with its development history intact.
+
+`git subtree split --prefix=sediment` rewrote the six commits so paths lose the
+`sediment/` prefix: the package sits at `sediment/`, tests at `tests/`, and the
+workflow at `.github/workflows/sediment.yml`, where GitHub actually runs it. No
+squashing — the commits that built it are still individually readable, which was
+half the point.
+
+Verified against the real remote after pushing: clean clone, six commits, 45
+tests passing.
+
+The copy was then removed from this repository so there is one source of truth.
 
 ---
 
