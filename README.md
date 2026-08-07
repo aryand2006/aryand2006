@@ -26,13 +26,25 @@ or add another LLM to review the first one. `sediment` scores the structural deb
 fails CI on erosion. Identifier-blind AST fingerprinting catches copy-paste that text
 diffing misses. Zero dependencies, 43 tests, gates itself in its own CI.
 
+**[parallax](https://github.com/aryand2006/parallax)** — measuring how much a backtest
+result depends on implementation rather than on the strategy.
+A 2026 paper showed that identical strategies run through different backtesting engines
+agree exactly at zero transaction cost and diverge once costs are switched on. `parallax`
+runs one auditable engine across 144 combinations of the execution decisions libraries
+make differently — fill timing, cost basis, slippage model, share rounding — and attributes
+the resulting spread to the decision responsible. Implementation risk scales monotonically
+with turnover, from 2.9% of the result at buy-and-hold to 166% at daily rebalancing; at
+10bp a daily strategy reports a Sharpe of either 0.54 or 2.18, which is the difference
+between a rejected idea and a funded one.
+
 **[ShadowStack](https://github.com/aryand2006/ShadowStack)** — a verified language
 modernization engine. 25k LOC of Java built on Eclipse JDT with full type resolution:
 call-graph and data-flow analysis, purity and mutation classification, baseline capture,
 and a 7-layer verification pipeline that proves a refactor preserved behavior before a
 human is asked to approve it. Pluggable adapters for Java, COBOL, and Python 2→3.
 
-Both are the same idea from different ends: **don't trust a transformation you can't verify.**
+One thread runs through all three: **don't trust a result you can't verify** — whether the
+thing producing it is a compiler, an agent, or a backtest.
 
 ---
 
