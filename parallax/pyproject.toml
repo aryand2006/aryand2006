@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parallax-backtest"
+version = "0.1.0"
+description = "Measure how much a backtest result depends on implementation choices rather than on the strategy."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Aryan Daga", email = "aryand@andrew.cmu.edu" }]
+keywords = ["backtesting", "quantitative-finance", "reproducibility", "implementation-risk", "transaction-costs"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Office/Business :: Financial :: Investment",
+]
+
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+parallax = "parallax.cli:main"
+
+[project.urls]
+Source = "https://github.com/aryand2006/parallax"
+
+[tool.setuptools.packages.find]
+include = ["parallax*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
