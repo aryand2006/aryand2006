@@ -166,6 +166,34 @@ The copy was then removed from this repository so there is one source of truth.
 
 ---
 
+## 7. Second project — parallax
+
+**[github.com/aryand2006/parallax](https://github.com/aryand2006/parallax)** —
+the same thesis applied to quantitative research.
+
+Chosen over the alternatives after a second research pass:
+
+| Candidate | Verdict |
+|---|---|
+| Implementation-risk harness for backtests | **Built.** Confirmed open — no differential-testing tool exists for backtest engines, and the finding it rests on is five months old |
+| Search-budget accounting (deflated Sharpe) | Second choice. `pypbo` implements the statistics and QuanterLab already auto-tracks trial counts commercially; the gap is an open-source in-loop library, which is a weaker novelty claim |
+| Market-impact / cost estimation library | Real gap, and it feeds the harness directly, but it is statistical modeling rather than verification — good for range, not for the thesis |
+| Limit order book / matching engine | **Avoided.** Ten-plus public C++ implementations, with mutually incomparable benchmark claims (15 ns/op, 7 ns/order, 171M orders/sec). Building an eleventh signals following a guide |
+
+The reasoning that settled it: for quant specifically, public *alpha* is read
+skeptically — if a strategy worked, why publish it — so the project that carries
+signal is infrastructure and methodology. That happens to be where the
+verification specialty already is.
+
+**Known limit, stated because it matters:** the headline numbers are on a
+controlled synthetic panel. The build environment had no market data access, so
+the experiment isolates the turnover/cost interaction rather than making a claim
+about any real market. `load_csv` takes real OHLCV and nothing downstream
+changes; reproducing the published table on real data is the first thing worth
+doing next.
+
+---
+
 ## Sources
 
 - [SlopCodeBench: Benchmarking How Coding Agents Degrade Over Long-Horizon Iterative Tasks](https://www.alphaxiv.org/resources/2603.24755v1)
