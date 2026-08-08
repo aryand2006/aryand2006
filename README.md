@@ -37,6 +37,16 @@ with turnover, from 2.9% of the result at buy-and-hold to 166% at daily rebalanc
 10bp a daily strategy reports a Sharpe of either 0.54 or 2.18, which is the difference
 between a rejected idea and a funded one.
 
+**[assay](https://github.com/aryand2006/assay)** — testing whether a backtest result
+survives the search that found it.
+The statistics of selection bias are well established; the check nobody runs is the blunt
+one — you tested N strategies and kept K, so what would running all N have returned?
+Auditing a live system with it found a deployment candidate whose three cointegration
+pairs had been kept from six tested: the reported 10.7%/yr becomes **1.7%/yr** once the
+three losers are put back, against a 6.5% risk-free rate. Also implements deflated Sharpe,
+minimum track record length, and probability of backtest overfitting via combinatorially
+symmetric cross-validation.
+
 **[ShadowStack](https://github.com/aryand2006/ShadowStack)** — a verified language
 modernization engine. 25k LOC of Java built on Eclipse JDT with full type resolution:
 call-graph and data-flow analysis, purity and mutation classification, baseline capture,
