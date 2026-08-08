@@ -53,8 +53,8 @@ call-graph and data-flow analysis, purity and mutation classification, baseline 
 and a 7-layer verification pipeline that proves a refactor preserved behavior before a
 human is asked to approve it. Pluggable adapters for Java, COBOL, and Python 2→3.
 
-One thread runs through all three: **don't trust a result you can't verify** — whether the
-thing producing it is a compiler, an agent, or a backtest.
+One thread runs through all four: **don't trust a result you can't verify** — whether the
+thing producing it is a compiler, an agent, a backtest, or the search that chose it.
 
 ---
 
