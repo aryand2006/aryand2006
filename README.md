@@ -47,13 +47,22 @@ three losers are put back, against a 6.5% risk-free rate. Also implements deflat
 minimum track record length, and probability of backtest overfitting via combinatorially
 symmetric cross-validation.
 
+**[clairvoyant](https://github.com/aryand2006/clairvoyant)** — detecting strategies
+that can see the future.
+Runs a decision function twice at the same date, once with the full dataset and once with
+everything after it hidden; code that only uses information available at the time cannot
+tell the difference. Measures how far forward a leak reaches by binary search on the visible
+future window, which separates an off-by-one in a `shift()` from a statistic computed over
+the whole sample — different bugs, different fixes. Black box, so it works against code you
+didn't write.
+
 **[ShadowStack](https://github.com/aryand2006/ShadowStack)** — a verified language
 modernization engine. 25k LOC of Java built on Eclipse JDT with full type resolution:
 call-graph and data-flow analysis, purity and mutation classification, baseline capture,
 and a 7-layer verification pipeline that proves a refactor preserved behavior before a
 human is asked to approve it. Pluggable adapters for Java, COBOL, and Python 2→3.
 
-One thread runs through all four: **don't trust a result you can't verify** — whether the
+One thread runs through all five: **don't trust a result you can't verify** — whether the
 thing producing it is a compiler, an agent, a backtest, or the search that chose it.
 
 ---
