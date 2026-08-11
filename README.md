@@ -67,6 +67,18 @@ thing producing it is a compiler, an agent, a backtest, or the search that chose
 
 ---
 
+### Research
+
+**[Spread tilt governs cost-model sensitivity in portfolio backtests](https://github.com/aryand2006/spread-tilt)**
+— working paper. A backtest's sensitivity to the choice of transaction-cost model turns out
+not to be a property of the universe being traded but of the strategy's relationship to it,
+predicted by one statistic computable before any backtest runs. The intuitive prediction is
+backwards: widening a universe's liquidity range makes the commission-model choice matter
+*less*. Measured on 48 Indian equities over 1,241 trading days, with every synthetic result
+regenerable from seed.
+
+---
+
 ### Also
 
 Live trading systems and portfolio optimization · RAG pipelines and retrieval
