@@ -27,6 +27,10 @@ interview question nobody can fake: *what happens when the network lies?*
 Consumer groups, durable partitions, at-least-once + per-partition order checks, seeded crash/drop campaigns.
 Amazon-shaped systems work: the log abstraction SQS/Kinesis/Kafka sit on — verified, not assumed.
 
+**[stratum](https://github.com/aryand2006/stratum)** — an LSM-tree storage engine that proves crash recovery.
+WAL with CRC framing, memtable, SSTables, L0→L1 compaction, and a VFS that discards unsynced bytes on crash.
+Seeded campaigns check durability, tombstones, and read-your-writes after reopen. Apple-shaped bottom-of-stack work.
+
 **[affidavit](https://github.com/aryand2006/affidavit)** — a research-governance gate that
 swears whether a strategy result survives falsification.
 One command runs selection reconstitution, degrees-of-freedom accounting, cost tilt,
