@@ -6,15 +6,23 @@
 ---
 
 I work on **program analysis and verification** — the part of the stack that decides
-whether code is actually correct, not just whether it runs.
+whether a result is actually correct, not just whether it looks right.
 
-In 2026 the constraint on software is no longer writing it. Models generate more code
-than teams can confirm is right, and the tooling for confirming it hasn't kept up.
-That gap is what I build for.
+In 2026 the constraint is no longer producing an answer. Models generate more code
+than teams can confirm is sound, and backtests report more Sharpes than anyone can
+falsify. The tooling for confirming either hasn't kept up. That gap is what I build for.
 
 ---
 
 ### Selected work
+
+**[affidavit](https://github.com/aryand2006/affidavit)** — a research-governance gate that
+swears whether a strategy result survives falsification.
+One command runs selection reconstitution, degrees-of-freedom accounting, cost tilt,
+placebo nulls, track-record tests, and a black-box lookahead probe, then writes a
+hash-chained JSON artifact. A result is **sworn** only when every applicable check
+passes. Checks whose inputs are absent are skipped, never guessed — a gate that
+guesses is a gate that gets overridden.
 
 **[sediment](https://github.com/aryand2006/sediment)** — a deterministic structural-erosion
 gate for machine-authored code.
@@ -62,7 +70,7 @@ call-graph and data-flow analysis, purity and mutation classification, baseline 
 and a 7-layer verification pipeline that proves a refactor preserved behavior before a
 human is asked to approve it. Pluggable adapters for Java, COBOL, and Python 2→3.
 
-One thread runs through all five: **don't trust a result you can't verify** — whether the
+One thread runs through all of it: **don't trust a result you can't verify** — whether the
 thing producing it is a compiler, an agent, a backtest, or the search that chose it.
 
 ---
