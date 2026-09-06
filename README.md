@@ -6,7 +6,7 @@
 ---
 
 I work on **program analysis and verification** — the part of the stack that decides
-whether a result is actually correct, not just whether it looks right.
+whether a result is actually correct — a backtest, a refactor, or a consensus protocol — not just whether it looks right.
 
 In 2026 the constraint is no longer producing an answer. Models generate more code
 than teams can confirm is sound, and backtests report more Sharpes than anyone can
@@ -15,6 +15,13 @@ falsify. The tooling for confirming either hasn't kept up. That gap is what I bu
 ---
 
 ### Selected work
+
+**[concord](https://github.com/aryand2006/concord)** — a Raft key-value store verified by
+deterministic simulation.
+Sans-IO Raft core, seeded fault injection (partitions, crashes, loss, reordering), continuous
+election/state-machine safety checks, and a Wing&Gong linearizability checker. Same seed ⇒
+bit-identical trace hash; a failing seed is a reproducing bug report. Built for the systems
+interview question nobody can fake: *what happens when the network lies?*
 
 **[affidavit](https://github.com/aryand2006/affidavit)** — a research-governance gate that
 swears whether a strategy result survives falsification.
