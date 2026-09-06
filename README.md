@@ -16,6 +16,12 @@ falsify. The tooling for confirming either hasn't kept up. That gap is what I bu
 
 ### Selected work
 
+**[grit](https://github.com/aryand2006/grit)** — resilience primitives verified under chaos.
+Circuit breaker, bulkhead, and bounded retry. A seeded campaign takes the dependency Down,
+requires the breaker to open and short-circuit, heals it, and requires recovery to Closed —
+then checks that protected attempts stay below an unprotected control. Netflix-shaped work:
+*I don't trust redundancy I haven't killed on purpose.*
+
 **[aperture](https://github.com/aryand2006/aperture)** — a metrics pipeline that proves planted-anomaly recall.
 Ingest → tumbling aggregates → spike/drop/flatline/gap detectors. A deterministic simulator plants
 ground-truth anomalies and fails on missed detections or clean-baseline false positives. Meta-shaped
