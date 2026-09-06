@@ -16,6 +16,11 @@ falsify. The tooling for confirming either hasn't kept up. That gap is what I bu
 
 ### Selected work
 
+**[aperture](https://github.com/aryand2006/aperture)** — a metrics pipeline that proves planted-anomaly recall.
+Ingest → tumbling aggregates → spike/drop/flatline/gap detectors. A deterministic simulator plants
+ground-truth anomalies and fails on missed detections or clean-baseline false positives. Meta-shaped
+observability work: the path under the dashboards, verified rather than demoed.
+
 **[concord](https://github.com/aryand2006/concord)** — a Raft key-value store verified by
 deterministic simulation.
 Sans-IO Raft core, seeded fault injection (partitions, crashes, loss, reordering), continuous
