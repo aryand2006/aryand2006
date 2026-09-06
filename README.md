@@ -23,6 +23,10 @@ election/state-machine safety checks, and a Wing&Gong linearizability checker. S
 bit-identical trace hash; a failing seed is a reproducing bug report. Built for the systems
 interview question nobody can fake: *what happens when the network lies?*
 
+**[scroll](https://github.com/aryand2006/scroll)** — a partitioned commit log that proves delivery under faults.
+Consumer groups, durable partitions, at-least-once + per-partition order checks, seeded crash/drop campaigns.
+Amazon-shaped systems work: the log abstraction SQS/Kinesis/Kafka sit on — verified, not assumed.
+
 **[affidavit](https://github.com/aryand2006/affidavit)** — a research-governance gate that
 swears whether a strategy result survives falsification.
 One command runs selection reconstitution, degrees-of-freedom accounting, cost tilt,
